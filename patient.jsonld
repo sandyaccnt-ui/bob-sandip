@@ -1,0 +1,85 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "healthcare": "https://healthcare.schema.org/",
+    "fhir": "http://hl7.org/fhir/"
+  },
+  "@type": "Patient",
+  "@id": "https://hospital.example.com/patient/12345",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "MRN",
+    "value": "MRN-12345"
+  },
+  "givenName": "John",
+  "familyName": "Doe",
+  "additionalName": "Michael",
+  "birthDate": "1985-06-15",
+  "gender": "Male",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main Street",
+    "addressLocality": "Springfield",
+    "addressRegion": "IL",
+    "postalCode": "62701",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-555-123-4567",
+  "email": "john.doe@example.com",
+  "bloodType": "O+",
+  "height": {
+    "@type": "QuantitativeValue",
+    "value": 180,
+    "unitCode": "cm"
+  },
+  "weight": {
+    "@type": "QuantitativeValue",
+    "value": 75,
+    "unitCode": "kg"
+  },
+  "medicalCondition": [
+    {
+      "@type": "MedicalCondition",
+      "name": "Hypertension",
+      "code": {
+        "@type": "MedicalCode",
+        "codeValue": "I10",
+        "codingSystem": "ICD-10"
+      }
+    }
+  ],
+  "medication": [
+    {
+      "@type": "Drug",
+      "name": "Lisinopril 10mg",
+      "activeIngredient": "Lisinopril"
+    }
+  ],
+  "allergyIntolerance": [
+    "Penicillin",
+    "Peanuts"
+  ],
+  "emergencyContact": {
+    "@type": "Person",
+    "name": "Jane Doe",
+    "telephone": "+1-555-987-6543",
+    "relationship": "Spouse"
+  },
+  "insuranceProvider": {
+    "@type": "Organization",
+    "name": "Blue Cross Blue Shield",
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "Policy Number",
+      "value": "BCBS-123456789"
+    }
+  },
+  "primaryCarePhysician": {
+    "@type": "Physician",
+    "@id": "https://hospital.example.com/practitioner/67890",
+    "name": "Dr. Sarah Johnson",
+    "medicalSpecialty": "Family Medicine"
+  },
+  "dateCreated": "2024-01-15T10:30:00Z",
+  "dateModified": "2024-03-20T14:45:00Z"
+}
